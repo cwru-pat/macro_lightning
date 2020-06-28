@@ -64,7 +64,7 @@ from . import data
 # Reference Densities
 
 
-def plot_atomic_density_line(mass: T.Sequence, label=True):
+def plot_atomic_density_line(mass: T.Sequence, label: bool = True):
     r"""Plot Atomic Density Line.
 
     Parameters
@@ -113,13 +113,13 @@ def plot_atomic_density_line(mass: T.Sequence, label=True):
 # -------------------------------------------------------------------
 
 
-def plot_nuclear_density_line(mass: T.Sequence, label=True):
+def plot_nuclear_density_line(mass: T.Sequence, label: bool = True):
     r"""Plot Nuclear Density Line.
 
     Parameters
     ----------
     mass : Sequence
-        used in atomic_density(mass)
+        Used in atomic_density(mass)
 
     Returns
     -------
@@ -161,13 +161,13 @@ def plot_nuclear_density_line(mass: T.Sequence, label=True):
 # -------------------------------------------------------------------
 
 
-def plot_black_hole_line(mass: T.Sequence, label=True):
+def plot_black_hole_line(mass: T.Sequence, label: bool = True):
     r"""Plot Black Hole Density Line.
 
     Parameters
     ----------
     mass : Sequence
-        used in atomic_density(mass)
+        Used in atomic_density(mass)
 
     Returns
     -------
@@ -176,7 +176,7 @@ def plot_black_hole_line(mass: T.Sequence, label=True):
     Other Parameters
     ----------------
     label : bool
-        whether to add the label :math:`\rho_{BH}`
+        Whether to add the label :math:`\rho_{BH}`
 
     Notes
     -----
@@ -208,25 +208,27 @@ def plot_black_hole_line(mass: T.Sequence, label=True):
 # -------------------------------------------------------------------
 
 
-def plot_reference_densities(mass: T.Sequence, label=True):
+def plot_reference_densities(mass: T.Sequence, label: bool = True):
     """Plot Reference Density lines / constraints.
 
     - atomic density line
     - nuclear density line
     - black hole density line
 
+    .. |Line2D| replace:: :class:`~matplotlib.lines.Line2D`
+
     Parameters
     ----------
     mass : Sequence
-        used in atomic_density(mass)
+        Used in atomic_density(mass)
 
     Returns
     -------
-    atom_line : :class:`~matplotlib.lines.Line2D`
+    atom_line : |Line2D|
         see `plot_atomic_density_line`
-    nuc_line : :class:`~matplotlib.lines.Line2D`
+    nuc_line : |Line2D|
         see `plot_nuclear_density_line`
-    bh_line : :class:`~matplotlib.lines.Line2D`
+    bh_line : |Line2D|
         see `plot_black_hole_line`
 
     Other Parameters
@@ -254,7 +256,9 @@ def plot_reference_densities(mass: T.Sequence, label=True):
 #####################################################################
 
 
-def plot_mica_constraints(points: T.Optional[T.Sequence] = None, label=False):
+def plot_mica_constraints(
+    points: T.Optional[T.Sequence] = None, label: bool = False
+):
     r"""Plot Constraints from Mica.
 
     A longstanding constraint comes from examination of a slab of
@@ -265,8 +269,8 @@ def plot_mica_constraints(points: T.Optional[T.Sequence] = None, label=False):
 
     Parameters
     ----------
-    points : ndarray, optional
-        N x 2 array for a `~matplotlib.Polygon`
+    points : `~numpy.ndarray`, optional
+        N x 2 array for a `~matplotlib.patches.Polygon`
         if None (default) will load from
         :func:`~macro_lightning.data.load_mica_constraints`
 
@@ -346,8 +350,8 @@ def plot_white_dwarf_constraints(
 
     Parameters
     ----------
-    points : ndarray, optional
-        N x 2 array for a `~matplotlib.Polygon`
+    points : `~numpy.ndarray`, optional
+        N x 2 array for a :class:`~matplotlib.patches.Polygon`
         if None (default) will load from :mod:`~macro_lightning.data`
 
     Returns
@@ -420,21 +424,23 @@ def plot_superbursts_constraints(
     binary 4U 1820-30, in which more than a decade passed between successive
     superbursts [1]_.
 
+    .. |Polygon| replace:: :class:`~matplotlib.patches.Polygon`
+
     Parameters
     ----------
-    points1 : ndarray, optional
-        N x 2 array for a `~matplotlib.Polygon`
+    points1 : `~numpy.ndarray`, optional
+        N x 2 array for a |Polygon|
         if None (default) will load from
         :func:`~macro_lightning.data.load_superbursts_polygons`
-    points2 : ndarray, optional
-        N x 2 array for a `~matplotlib.Polygon`
+    points2 : `~numpy.ndarray`, optional
+        N x 2 array for a |Polygon|
         if None (default) will load from
         :func:`~macro_lightning.data.load_superbursts_polygons`
 
     Returns
     -------
-    superbursts1_poly : :class:`~matplotlib.patches.Polygon`
-    superbursts2_poly : :class:`~matplotlib.patches.Polygon`
+    superbursts1_poly : |Polygon|
+    superbursts2_poly : |Polygon|
 
     Other Parameters
     ----------------
@@ -499,7 +505,9 @@ def plot_superbursts_constraints(
 # -------------------------------------------------------------------
 
 
-def plot_cmb_constraints(m_arr: T.Sequence, sigmax: float, label=False):
+def plot_cmb_constraints(
+    m_arr: T.Sequence, sigmax: float, label: bool = False
+):
     r"""Plot Constraints from the CMB.
 
     Wilkinson et al. [1] utilized the full Boltzmann formalism to
@@ -508,7 +516,7 @@ def plot_cmb_constraints(m_arr: T.Sequence, sigmax: float, label=False):
 
     Parameters
     ----------
-    m_arr : ndarray
+    m_arr : `~numpy.ndarray`
     sigmax : float
         maximum plotted sigma
 
@@ -579,17 +587,19 @@ def plot_humandeath_constraints(
     region bounded by :math:`\sigma_X > 10^{−8} − 10^{−7}` cm2 and :math:`M_X
     < 50` kg [1].
 
+    .. |ndarray| replace:: :class:`~numpy.ndarray`
+
     Parameters
     ----------
-    human_mass : ndarray, optional
+    human_mass : |ndarray|, optional
         N x 1 array for a :class:`~matplotlib.pyplot.fill_between`
         if None (default) will load from
         :func:`~macro_lightning.data.load_humandeath_constraints`
-    human_xsec : ndarray, optional
+    human_xsec : |ndarray|, optional
         N x 1 array for a `~fill_between`
         if None (default) will load from
         :func:`~macro_lightning.data.load_humandeath_constraints`
-    human_upper : ndarray, optional
+    human_upper : |ndarray|, optional
         N x 1 array for a `~fill_between`
         if None (default) will load from
         :func:`~macro_lightning.data.load_humandeath_constraints`
@@ -655,15 +665,17 @@ def plot_dfn_constraints(
     one of these networks still currently in use, the Desert Fireball Network
     in Australia, is estimated [1]_.
 
+    .. |ndarray| replace:: :class:`~numpy.ndarray`
+
     Parameters
     ----------
-    DFNmass : ndarray, optional
+    DFNmass : |ndarray|, optional
         N x 1 array for a :class:`~matplotlib.pyplot.fill_between`
         if None (default) will load from :mod:`~macro_lightning.data`
-    dfn_xsec : ndarray, optional
+    dfn_xsec : |ndarray|, optional
         N x 1 array for a `~fill_between`
         if None (default) will load from :mod:`~macro_lightning.data`
-    dfn_upper : ndarray, optional
+    dfn_upper : |ndarray|, optional
         N x 1 array for a `~fill_between`
         if None (default) will load from :mod:`~macro_lightning.data`
 
@@ -720,7 +732,7 @@ def plot_lensing_constraints(
 
     Parameters
     ----------
-    Mmicro : ndarray, optional
+    Mmicro : `~numpy.ndarray`, optional
         N x 1 array for a :class:`~matplotlib.pyplot.fill_between`
         if None (default) will ``np.logspace(23.0, 28.0)``
 
@@ -773,12 +785,14 @@ def plot_lensing_constraints(
 # -------------------------------------------------------------------
 
 
-def plot_black_hole_constraints(m_arr: T.Sequence, sigmin: float, label=False):
+def plot_black_hole_constraints(
+    m_arr: T.Sequence, sigmin: float, label: bool = False
+):
     r"""Plot Constraints from Black Holes.
 
     Parameters
     ----------
-    m_arr : ndarray, optional
+    m_arr : `~numpy.ndarray`, optional
         N x 1 array for a :class:`~matplotlib.pyplot.fill_between`
     sigmin : float
         minimum plotted sigma
@@ -843,24 +857,24 @@ def constraints_plot(
     Parameters
     ----------
     m_arr : Sequence
-        mass array
+        Mass array
     sigmin : float
-        minimum plotted sigma
+        Minimum plotted sigma
     sigmax : float
-        maximum plotted sigma
+        Maximum plotted sigma
     constr_labels : bool
-        whether to add labels to all the `Other Parameters`
+        Whether to add labels to all the `Other Parameters`
 
     Yields
     ------
     fig : :class:`~matplotlib.Figure`
     ax : :class:`~matplotlib.Axes`
     m_arr : Sequence
-        mass array
+        Mass array
     sigmin : float
-        minimum plotted sigma
+        Minimum plotted sigma
     sigmax : float
-        maximum plotted sigma
+        Maximum plotted sigma
 
     Other Parameters
     ----------------

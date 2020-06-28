@@ -1,0 +1,3 @@
+[submodule "papers_and_presentations/paper"]
+	path = papers_and_presentations/paper
+	url = https://nstarman@github.com/nstarman/macro_lightning_paper.git

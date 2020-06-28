@@ -25,28 +25,24 @@ from numpy.linalg import norm
 
 
 ##############################################################################
-# PARAMETERS
-
-
-##############################################################################
 # CODE
 ##############################################################################
 
 
 def as_quantity(arg):
-    """Convert argument to a Quantity (or raise NotImplementedError).
+    """Convert argument to a Quantity (or raise `NotImplementedError`).
 
     from :mod:`~astropy.utils`.
 
     Returns
     -------
-    Quantity
+    `~astropy.units.Quantity`
         not copied, quantity subclasses passed through.
 
     Raises
     ------
-    NotImplementedError
-        if Quantity() fails
+    `NotImplementedError`
+        if ``Quantity(arg)`` fails
 
     """
     try:
@@ -65,20 +61,20 @@ def qsquare(*args, **kw):
 
     Parameters
     ----------
-    *args : Quantity
-        passed, as tuple, to :func:`~as_quantity`
+    *args : `~astropy.units.Quantity`
+        Passed, as tuple, to :func:`~as_quantity`
     **kw
-        arguments into :func:`~numpy.square`
+        Arguments into :func:`~numpy.square`
 
     Returns
     -------
-    Quantity
-        not copied, quantity subclasses passed through.
+    `~astropy.units.Quantity`
+        Not copied, subclasses passed through.
 
     Raises
     ------
-    NotImplementedError
-        if :func:`~as_quantity` fails
+    `NotImplementedError`
+        If :func:`~as_quantity` fails
 
     """
     return np.square(as_quantity(args), **kw)
@@ -94,20 +90,20 @@ def qnorm(*args, **kw):
 
     Parameters
     ----------
-    *args : Quantity
-        passed, as tuple, to :func:`~as_quantity`
+    *args : `~astropy.units.Quantity`
+        Passed, as tuple, to :func:`~as_quantity`
     **kw
-        arguments into :func:`~numpy.linalg.norm`
+        Arguments into :func:`~numpy.linalg.norm`
 
     Returns
     -------
-    Quantity
+    `~astropy.units.Quantity`
         not copied, quantity subclasses passed through.
 
     Raises
     ------
-    NotImplementedError
-        if :func:`~as_quantity` fails
+    `NotImplementedError`
+        If :func:`~as_quantity` fails
 
     """
     return norm(as_quantity(args), **kw)
@@ -124,8 +120,8 @@ def qarange(start, stop, step, unit=None):
 
     Raises
     ------
-    AttributeError
-        if start, stop, or step are not :class:`~astropy.units.Quantity`
+    `AttributeError`
+        If `start`, `stop`, or `step` are not `~astropy.units.Quantity`
 
     """
     if unit is None:

@@ -13,9 +13,9 @@ Code Quality
    :target: https://github.com/psf/black
 
 .. |Codacy Quality| image:: https://api.codacy.com/project/badge/Grade/c56175a35d0040e28cf3ff070271b9b3
-	:target: https://www.codacy.com/manual/nstarman/macro_lightning
+	:target: https://www.codacy.com/manual/cwru-pat/macro_lightning
 	:alt: Codacy Code Quality
 
 .. |Codacy Maintainability| image:: https://api.codeclimate.com/v1/badges/102775da549e5999e4fc/maintainability
-   :target: https://codeclimate.com/github/nstarman/macro_lightning/maintainability
+   :target: https://codeclimate.com/github/cwru-pat/macro_lightning/maintainability
    :alt: Maintainability

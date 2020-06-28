@@ -4,6 +4,8 @@
 What's New in `macro_lightning` v1.0.X?
 ***************************************
 
+|DOI|
+
 Bug fixes (in X releases) are annotated with `@X`
 
 Overview
@@ -39,12 +41,17 @@ Physics
 
 Physics functions for calculating a variety of previously derived constraints. None of these functions are used in the macro derivation.
 
-	- :func:`~macro_lightning.physics.CMB`
-	- :func:`~macro_lightning.physics.nuclear_density`
-	- :func:`~macro_lightning.physics.black_hole`
-	- :func:`~macro_lightning.physics.atomic_density`
-	- :func:`~macro_lightning.physics.KeplerTop`
-	- :func:`~macro_lightning.physics.LMCTop`
+- :func:`~macro_lightning.physics.CMB`
+- :func:`~macro_lightning.physics.nuclear_density`
+- :func:`~macro_lightning.physics.black_hole`
+- :func:`~macro_lightning.physics.atomic_density`
+- :func:`~macro_lightning.physics.KeplerTop`
+- :func:`~macro_lightning.physics.LMCTop`
+- :func:`~macro_lightning.physics.twobody_vesc`
+- :func:`~macro_lightning.physics.multibody_vesc`
+- :func:`~macro_lightning.physics.calculate_Mx`
+- :func:`~macro_lightning.physics.calculate_Sx`
+- :func:`~macro_lightning.physics.calculate_Mx_and_Sx`
 
 
 .. _whatsnew-1.0-parameters:
@@ -54,8 +61,8 @@ Parameters
 
 Solar system parameters for calculating infall velocities.
 
-	- :func:`~macro_lightning.parameters.solar_system_vesc_params`
-	- :func:`~macro_lightning.parameters.vesc_sun_at_R`
+- :func:`~macro_lightning.parameters.solar_system_vesc_params`
+- :func:`~macro_lightning.parameters.vesc_sun_at_R`
 
 
 .. _whatsnew-1.0-plot:
@@ -65,25 +72,25 @@ Plot
 
 Reference densities, such as atomic, nuclear, and black hole. Also a function to plot all reference densities.
 
-	- :func:`~macro_lightning.plot.plot_atomic_density_line`
-	- :func:`~macro_lightning.plot.plot_nuclear_density_line`
-	- :func:`~macro_lightning.plot.plot_black_hole_line`
-	- :func:`~macro_lightning.plot.plot_reference_densities`
+- :func:`~macro_lightning.plot.plot_atomic_density_line`
+- :func:`~macro_lightning.plot.plot_nuclear_density_line`
+- :func:`~macro_lightning.plot.plot_black_hole_line`
+- :func:`~macro_lightning.plot.plot_reference_densities`
 
 Plotting functions related to constraint plots.
 
-	- :func:`~macro_lightning.plot.plot_mica_constraints`
-	- :func:`~macro_lightning.plot.plot_white_dwarf_constraints`
-	- :func:`~macro_lightning.plot.plot_cmb_constraints`
-	- :func:`~macro_lightning.plot.plot_superbursts_constraints`
-	- :func:`~macro_lightning.plot.plot_humandeath_constraints`
-	- :func:`~macro_lightning.plot.plot_dfn_constraints`
-	- :func:`~macro_lightning.plot.plot_lensing_constraints`
-	- :func:`~macro_lightning.plot.plot_black_hole_constraints`
+- :func:`~macro_lightning.plot.plot_mica_constraints`
+- :func:`~macro_lightning.plot.plot_white_dwarf_constraints`
+- :func:`~macro_lightning.plot.plot_cmb_constraints`
+- :func:`~macro_lightning.plot.plot_superbursts_constraints`
+- :func:`~macro_lightning.plot.plot_humandeath_constraints`
+- :func:`~macro_lightning.plot.plot_dfn_constraints`
+- :func:`~macro_lightning.plot.plot_lensing_constraints`
+- :func:`~macro_lightning.plot.plot_black_hole_constraints`
 
 And a contextmanager for quick creation of new plots.
 
-	- :func:`~macro_lightning.plot.constraints_plot`
+- :func:`~macro_lightning.plot.constraints_plot`
 
 
 .. _whatsnew-1.0-data:
@@ -92,10 +99,10 @@ Data
 ====
 Functions to load the data.
 
-    - :func:`~macro_lightning.data.load_mica_constraints`
-    - :func:`~macro_lightning.data.load_superbursts_polygons`
-    - :func:`~macro_lightning.data.load_humandeath_constraints`
-    - :func:`~macro_lightning.data.load_whitedwarf_constraints`
+- :func:`~macro_lightning.data.load_mica_constraints`
+- :func:`~macro_lightning.data.load_superbursts_polygons`
+- :func:`~macro_lightning.data.load_humandeath_constraints`
+- :func:`~macro_lightning.data.load_whitedwarf_constraints`
 
 
 .. _whatsnew-1.0-utils:
@@ -105,6 +112,11 @@ Utils
 Functions to work with lists of :class:`~astropy.units.Quantity`.
 These first convert the list of quantities to a quantity list, which can natively work with numpy functions.
 
-    - :func:`~macro_lightning.utils.as_quantity`
-    - :func:`~macro_lightning.utils.qsquare`
-    - :func:`~macro_lightning.utils.qnorm`
+- :func:`~macro_lightning.utils.as_quantity`
+- :func:`~macro_lightning.utils.qsquare`
+- :func:`~macro_lightning.utils.qnorm`
+- :func:`~macro_lightning.utils.qarange`
+
+
+.. |DOI| image:: https://zenodo.org/badge/275470390.svg
+   :target: https://zenodo.org/badge/latestdoi/275470390

@@ -10,7 +10,7 @@ This is entirely unlike ordinary bolt lightning in which a long sequence of hund
 
 For the mathematical derivation of these properties, as well as the phase-space constraints on macro models from non-observation of straight lightning on Earth and Jupiter, see the paper. This is documentation for the code used in the paper.
 
-All code and data is available on a `public repository on GitHub <https://github.com/nstarman/macro_lightning>`_, so if you have any trouble, `open an issue <https://github.com/nstarman/macro_lightning/issues>`_ there.
+All code and data is available on a `public repository on GitHub <https://github.com/cwru-pat/macro_lightning>`_, so if you have any trouble, `open an issue <https://github.com/cwru-pat/macro_lightning/issues>`_ there.
 
 .. container::
 
@@ -43,6 +43,7 @@ THough the code base is quite light it has been split into its natural component
    macro_lightning/utils
    macro_lightning/physics
    macro_lightning/parameters
+   macro_lightning/data
 
 
 ********
@@ -62,9 +63,9 @@ How to contribute
 |Milestones| |Open Issues| |Last Commit|
 
 We welcome contributions from anyone via pull requests on `GitHub
-<https://github.com/nstarman/macro_lightning>`_. If you don't feel comfortable modifying or
+<https://github.com/cwru-pat/macro_lightning>`_. If you don't feel comfortable modifying or
 adding functionality, we also welcome feature requests and bug reports as
-`GitHub issues <https://github.com/nstarman/macro_lightning/issues>`_.
+`GitHub issues <https://github.com/cwru-pat/macro_lightning/issues>`_.
 
 The development process follows that of the `astropy-package-template <https://docs.astropy.org/en/latest/development/astropy-package-template.html>`_ from Astropy's `release procedure <https://docs.astropy.org/en/latest/development/releasing.html#release-procedure>`_.
 
@@ -75,18 +76,18 @@ Attribution
 
 |DOI| |License|
 
-Copyright 2018- Nathaniel Starkman and contributors.
+Copyright 2020 - Nathaniel Starkman, Jagjit Sidhu, Harrison Winch, Glenn Starkan, and contributors.
 
-``macro_lightning`` is free software made available under the BSD-3 License. For details see the `LICENSE <https://github.com/nstarman/macro_lightning/blob/master/LICENSE>`_ file.
+``macro_lightning`` is free software made available under the BSD-3 License. For details see the `LICENSE <https://github.com/cwru-pat/macro_lightning/blob/master/LICENSE>`_ file.
 
 If you make use of this code, please consider citing the Zenodo DOI as a software citation::
 
    @software{macro_lightning:zenodo,
-     author       = {nstarman},
-     title        = {macro_lightning},
+     author       = {Nathaniel Starkman and Jagjit Sidhu and Harrison Winch and Glenn Starkman},
+     title        = {Constraints from Macro-Induced Lightning},
      publisher    = {Zenodo},
-     doi          = {10.5281/zenodo.3491011},
-     url          = {https://doi.org/10.5281/zenodo.3491011}
+     doi          = {10.5281/zenodo.3911476},
+     url          = {https://zenodo.org/badge/latestdoi/275470390}
    }
 
 
@@ -106,14 +107,14 @@ Project details
 .. |astropy| image:: http://img.shields.io/badge/powered%20by-AstroPy-orange.svg?style=flat
    :target: http://www.astropy.org/
 
-.. |Build Status| image:: https://travis-ci.com/nstarman/macro_lightning.svg?branch=master
-    :target: https://travis-ci.com/nstarman/macro_lightning
+.. |Build Status| image:: https://travis-ci.com/cwru-pat/macro_lightning.svg?branch=master
+    :target: https://travis-ci.com/cwru-pat/macro_lightning
 
 .. |Documentation Status| image:: https://readthedocs.org/projects/macro_lightning/badge/?version=latest
    :target: https://macro_lightning.readthedocs.io/en/latest/?badge=latest
 
-.. |DOI| image:: https://zenodo.org/badge/192425953.svg
-   :target: https://zenodo.org/badge/latestdoi/192425953
+.. |DOI| image:: https://zenodo.org/badge/275470390.svg
+   :target: https://zenodo.org/badge/latestdoi/275470390
 
 .. |License| image:: https://img.shields.io/badge/License-BSD%203--Clause-blue.svg
    :target: https://opensource.org/licenses/BSD-3-Clause
@@ -121,14 +122,14 @@ Project details
 .. |PyPI| image:: https://badge.fury.io/py/macro_lightning.svg
    :target: https://badge.fury.io/py/macro_lightning
 
-.. |Milestones| image:: https://img.shields.io/github/milestones/open/nstarman/macro_lightning?style=flat
+.. |Milestones| image:: https://img.shields.io/github/milestones/open/cwru-pat/macro_lightning?style=flat
    :alt: GitHub milestones
 
-.. |Open Issues| image:: https://img.shields.io/github/issues-raw/nstarman/macro_lightning?style=flat
+.. |Open Issues| image:: https://img.shields.io/github/issues-raw/cwru-pat/macro_lightning?style=flat
    :alt: GitHub issues
 
-.. |Last Commit| image:: https://img.shields.io/github/last-commit/nstarman/macro_lightning/master?style=flat
+.. |Last Commit| image:: https://img.shields.io/github/last-commit/cwru-pat/macro_lightning/master?style=flat
    :alt: GitHub last commit (branch)
 
-.. |Coveralls| image:: https://coveralls.io/repos/github/nstarman/macro_lightning/badge.svg?branch=master
-   :target: https://coveralls.io/github/nstarman/macro_lightning?branch=master
+.. |Coveralls| image:: https://coveralls.io/repos/github/cwru-pat/macro_lightning/badge.svg?branch=master
+   :target: https://coveralls.io/github/cwru-pat/macro_lightning?branch=master

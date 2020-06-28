@@ -9,6 +9,9 @@ __all__ = [
     "load_superbursts_polygons",
     "load_humandeath_constraints",
     "load_whitedwarf_constraints",
+    "load_dfn_constraints",
+    "load_dfn_future_constraints",
+    "load_whitedwarf_constraints"
 ]
 
 
@@ -52,7 +55,7 @@ def load_mica_constraints() -> T.Sequence:
 
     Returns
     -------
-    points : :class:`numpy.ndarray`
+    points : :class:`~numpy.ndarray`
         N x 2 array for a :class:`~matplotlib.patches.Polygon`
 
     References
@@ -91,12 +94,15 @@ def load_superbursts_polygons() -> T.Tuple[T.Sequence, T.Sequence]:
     binary 4U 1820-30, in which more than a decade passed between successive
     superbursts [1]_.
 
+    .. |ndarray| replace:: :class:`~numpy.ndarray`
+    .. |Polygon| replace:: :class:`~matplotlib.patches.Polygon`
+
     Returns
     -------
-    superbursts1_points : :class:`~numpy.ndarray`
-        N x 2 array for a :class:`~matplotlib.patches.Polygon`
-    superbursts2_points : array
-        N x 2 array for a `~matplotlib.patches.Polygon`
+    superbursts1_points : |ndarray|
+        N x 2 array for a |Polygon|
+    superbursts2_points : |ndarray|
+        N x 2 array for a |Polygon|
 
     References
     ----------
@@ -136,13 +142,15 @@ def load_humandeath_constraints() -> T.Tuple[
     region bounded by :math:`\sigma_X > 10^{−8} − 10^{−7}` cm2 and :math:`M_X
     < 50` kg [1].
 
+    .. |ndarray| replace:: :class:`~numpy.ndarray`
+
     Returns
     -------
-    mass : ndarray, optional
+    mass : |ndarray|, optional
         N x 1 array for :class:`~matplotlib.pyplot.fill_between`
-    xsec : ndarray, optional
+    xsec : |ndarray|, optional
         N x 1 array for `~fill_between` 2nd argument
-    upper : ndarray, optional
+    upper : |ndarray|, optional
         N x 1 array for a `~fill_between` 3rd argument
 
     References
@@ -177,13 +185,15 @@ def load_dfn_constraints() -> T.Tuple[T.Sequence, T.Sequence, T.Sequence]:
     one of these networks still currently in use, the Desert Fireball Network
     in Australia, is estimated [1]_.
 
+    .. |ndarray| replace:: :class:`~numpy.ndarray`
+
     Returns
     -------
-    mass : ndarray, optional
+    mass : |ndarray|, optional
         N x 1 array for :class:`~matplotlib.pyplot.fill_between`
-    xsec : ndarray, optional
+    xsec : |ndarray|, optional
         N x 1 array for `~fill_between` 2nd argument
-    upper : ndarray, optional
+    upper : |ndarray|, optional
         N x 1 array for a `~fill_between` 3rd argument
 
     References
@@ -220,13 +230,15 @@ def load_dfn_future_constraints() -> T.Tuple[
     one of these networks still currently in use, the Desert Fireball Network
     in Australia, is estimated [1]_.
 
+    .. |ndarray| replace:: :class:`~numpy.ndarray`
+
     Returns
     -------
-    mass : ndarray, optional
+    mass : |ndarray|, optional
         N x 1 array for :class:`~matplotlib.pyplot.fill_between`
-    xsec : ndarray, optional
+    xsec : |ndarray|, optional
         N x 1 array for `~fill_between` 2nd argument
-    upper : ndarray, optional
+    upper : |ndarray|, optional
         N x 1 array for a `~fill_between` 3rd argument
 
     References
@@ -262,7 +274,7 @@ def load_whitedwarf_constraints() -> T.Sequence:
 
     Returns
     -------
-    points : :class:`numpy.ndarray`
+    points : :class:`~numpy.ndarray`
         N x 2 array for a :class:`~matplotlib.patches.Polygon`
 
     References

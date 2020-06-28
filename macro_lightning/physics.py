@@ -31,6 +31,7 @@ import typing as T
 
 import astropy.units as u
 from astropy.utils.decorators import format_doc
+from astropy.utils.misc import indent
 
 import numpy as np
 
@@ -56,7 +57,7 @@ _sqrt2 = np.sqrt(2)
 
 
 def CMB(M: T.Sequence) -> T.Sequence:
-    r"""CMB bound from Celine Boehm paper
+    r"""CMB bound from Celine Boehm paper.
 
     Paper considers dark matter elastic scattering effects on the CMB.
     :math:`sigma_x/M_x \geq 4.5e-7` is ruled out.
@@ -135,15 +136,15 @@ def f_BM_bin(vx, vbin, vvir):
 
     Parameters
     ----------
-    vx : Quantity
+    vx : |Quantity|
         With physical type "speed"
-    vvir : Quantity
+    vvir : |Quantity|
         The virial velocity
         With physical type "speed"
 
     Returns
     -------
-    Quantity
+    |Quantity|
         The fraction of macros in the distribution that have some minimum
         velocity after performing the integral (4) in [1]_;
         We iterate over a wide range of velocities.
@@ -152,6 +153,8 @@ def f_BM_bin(vx, vbin, vvir):
     ----------
     .. [1] J.  S.  Sidhu  and  G.  Starkman,  Physical  Review  D
          100(2019), 10.1103/physrevd.100.123008.
+
+    .. |Quantity| replace:: :class:`~astropy.units.Quantity`
 
     """
     norm = (vbin / vvir) ** 3 / np.power(np.pi, 3.0 / 2.0)
@@ -172,34 +175,34 @@ def _norm_v1_v2(v1: T.Sequence, v2: T.Sequence) -> T.Sequence:
 # /def
 
 
-_multibody_escape_wikipedia = r"""
-    When escaping a compound system, such as a moon orbiting a planet or a
-    planet orbiting a sun, a rocket that leaves at escape velocity (ve1) for
-    the first (orbiting) body, (e.g. Earth) will not travel to an infinite
-    distance because it needs an even higher speed to escape gravity of the
-    second body (e.g. the Sun). Near the Earth, the rocket's trajectory will
-    appear parabolic, but it will still be gravitationally bound to the second
-    body and will enter an elliptical orbit around that body, with an orbital
-    speed similar to the first body.
+_multibody_escape_wikipedia = indent(r"""
+When escaping a compound system, such as a moon orbiting a planet or a
+planet orbiting a sun, a rocket that leaves at escape velocity (ve1) for
+the first (orbiting) body, (e.g. Earth) will not travel to an infinite
+distance because it needs an even higher speed to escape gravity of the
+second body (e.g. the Sun). Near the Earth, the rocket's trajectory will
+appear parabolic, but it will still be gravitationally bound to the second
+body and will enter an elliptical orbit around that body, with an orbital
+speed similar to the first body.
 
-    To escape the gravity of the second body once it has escaped the first
-    body the rocket will need to be traveling at the escape velocity for the
-    second body (ve2) (at the orbital distance of the first body). However,
-    when the rocket escapes the first body it will still have the same orbital
-    speed around the second body that the first body has (vo). So its excess
-    velocity as it escapes the first body will need to be the difference
-    between the orbital velocity and the escape velocity. With a circular
-    orbit, escape velocity is sqrt(2) times the orbital speed. Thus the total
-    escape velocity vte when leaving one body orbiting a second and seeking to
-    escape them both is, under simplified assumptions:
+To escape the gravity of the second body once it has escaped the first
+body the rocket will need to be traveling at the escape velocity for the
+second body (ve2) (at the orbital distance of the first body). However,
+when the rocket escapes the first body it will still have the same orbital
+speed around the second body that the first body has (vo). So its excess
+velocity as it escapes the first body will need to be the difference
+between the orbital velocity and the escape velocity. With a circular
+orbit, escape velocity is sqrt(2) times the orbital speed. Thus the total
+escape velocity vte when leaving one body orbiting a second and seeking to
+escape them both is, under simplified assumptions:
 
-    .. math::
+.. math::
 
-        v_{te}=\sqrt{(v_{e2} - v_o)^2 + v_{e1}^2}
-        = \sqrt{\left(k v_{e2}\right)^2 + v_{e1}^2}
+    v_{te}=\sqrt{(v_{e2} - v_o)^2 + v_{e1}^2}
+    = \sqrt{\left(k v_{e2}\right)^2 + v_{e1}^2}
 
-    where :math:`k=1−1/\sqrt{2} \sim 0.2929` for circular orbits.
-"""  # TODO instead indent by function
+where :math:`k=1−1/\sqrt{2} \sim 0.2929` for circular orbits.
+""")
 
 
 @format_doc(None, wikipedia=_multibody_escape_wikipedia)
@@ -208,22 +211,23 @@ def twobody_vesc(
 ):
     r"""Two-body escape velocity.
 
+    .. |Quantity| replace:: :class:`~astropy.units.Quantity`
+
     Parameters
     ----------
-    ve1, ve2: :class:`~astropy.units.Quantity`
+    ve1, ve2 : |Quantity|
         Escape velocities.
-    vo : Quantity or None, optional
+    vo : |Quantity| or `None`, optional
         The orbital velocity of object 1 around object 2.
 
     Returns
     -------
-    vesc : :class:`~astropy.units.Quantity`
+    vesc : |Quantity|
         The compound escape velocity.
 
     Examples
     --------
-    For a Galactic macro falling into the potential well of the Earth,
-    the minimum observed velocity
+    For a rocket attempting to escape the solar system.
 
         >>> vesc_earth = 11.186 * u.km / u.s
         >>> vesc_sun_at_earth = 42.1 * u.km / u.s
@@ -259,12 +263,14 @@ def multibody_vesc(
 ):
     """Multi-body escape velocity.
 
+    .. |Quantity| replace:: :class:`~astropy.units.Quantity`
+
     Parameters
     ----------
-    *vescs: Quantity
+    *vescs: |Quantity|
         velocities, ordered from 1st to last body.
 
-    vo : list of Quantity or None, optional
+    vo : list of |Quantity| or None, optional
         The orbital velocity of object vescs[i+1] around object vescs[i].
         if list of quantities, must match vescs in length
         if None (default) then orbits are assumed circular.
@@ -275,14 +281,13 @@ def multibody_vesc(
 
     Returns
     -------
-    :class:`~astropy.units.Quantity`
+    |Quantity|
         The compound escape velocity
         if `accumulate` False (default) then scalar, else accumulated vector.
 
     Examples
     --------
-    For a Galactic macro falling into the potential well of the Earth,
-    the minimum observed velocity
+    For a rocket attempting to escape the Galaxy.
 
         >>> vesc_earth = 11.186 * u.km / u.s
         >>> vesc_sun_at_earth = 42.1 * u.km / u.s
@@ -347,22 +352,22 @@ def calculate_Mx(vels, vvir, vesc, vcirc, vmin, Arho, m_unit=u.g):
     vels : Sequence
         an array of velocities, treated as along one Cartesian component.
         must be evenly spaced
-    vvir : Quantity
+    vvir : |Quantity|
         virial velocity
-    vesc : Quantity
+    vesc : |Quantity|
         Galactocentric escape velocity
-    vcirc : Quantity
+    vcirc : |Quantity|
         Galactocentric circular velocity
-    vmin : Quantity
+    vmin : |Quantity|
         infall velocity of a macro to the Earth.
 
     Returns
     -------
     Mxs : Sequence
-    vbar : Quantity
+    vbar : |Quantity|
         The value of the integral 4 as we iterate over different values of vx,
         vy and vz.
-    Vhold : Quantity
+    Vhold : |Quantity|
         hold accounts for the usage of the minimum speed (not vbar; that is
         relevant to M_x only) when determining the minimum sigma_x  for a
         detectable signal. Vhold Starts high and then is constantly lowered as
@@ -375,6 +380,8 @@ def calculate_Mx(vels, vvir, vesc, vcirc, vmin, Arho, m_unit=u.g):
     Notes
     -----
     this integration can be very slow.
+
+    .. |Quantity| replace:: :class:`~astropy.units.Quantity`
 
     """
     vbar = 0.0 * u.km / u.s
@@ -428,25 +435,25 @@ def calculate_Sx(
     Parameters
     ----------
     vels : Sequence
-        an array of velocities, treated as along one Cartesian component.
-        must be evenly spaced
-    vesc : Quantity
+        Array of velocities, treated as along one Cartesian component.
+        Must be evenly spaced
+    vesc : |Quantity|
         Galactocentric escape velocity
-    vhold : Quantity
+    vhold : |Quantity|
         Vhold accounts for the usage of the minimum speed (not vbar; that is
         relevant to M_x only) when determining the minimum sigma_x  for a
         detectable signal. Vhold Starts high and then is constantly lowered as
         we iterate over different values of vx, vy, vz.
-    vcirc : Quantity
+    vcirc : |Quantity|
         Galactocentric circular velocity
-    vmin : Quantity
+    vmin : |Quantity|
         infall velocity of a macro to the Earth.
-    minsigma : Quantity
+    minsigma : |Quantity|
 
     Returns
     -------
     Sxs : Sequence
-    vhold : Quantity
+    vhold : |Quantity|
 
     Other Parameters
     ----------------
@@ -455,6 +462,8 @@ def calculate_Sx(
     Notes
     -----
     This integration can be slow.
+
+    .. |Quantity| replace:: :class:`~astropy.units.Quantity`
 
     """
     Sxs = np.zeros(len(vels) ** 3) * sig_unit
@@ -491,45 +500,49 @@ def calculate_Mx_and_Sx(
     vesc=550 * _KMS,
     vcirc=220 * _KMS,
     vmin=42.1 * _KMS,
-    Arho=3 * u.g * u.s / u.m,  # A_{det}*\rho_{DM},
+    Arho=3 * u.g * u.s / u.m,
     *,
     minsigma=6e-8 * u.cm ** 2,
     sigma_factor=None,
     m_unit=u.g,
     sig_unit=u.cm ** 2,
 ):
-    """Calculate Mx and Sx.
+    r"""Calculate Mx and Sx.
 
     Parameters
     ----------
     vels : Sequence
-        an array of velocities, treated as along one Cartesian component.
-        must be evenly spaced
-    vvir : Quantity
+        Array of velocities, treated as along one Cartesian component.
+        Must be evenly spaced
+    vvir : |Quantity|, optional
         virial velocity
-    vesc : Quantity
+    vesc : |Quantity|, optional
         Galactocentric escape velocity
-    vcirc : Quantity
+    vcirc : |Quantity|, optional
         Galactocentric circular velocity
-    vmin : Quantity
+    vmin : |Quantity|, optional
         infall velocity of a macro to the Earth.
-    minsigma : Quantity
+    Arho: |Quantity|, optional
+        A_{det}*\rho_{DM},
+    minsigma : |Quantity|, optional
 
     Returns
     -------
     Mxs, Sxs : Sequence
-    vbar : Quantity
-    vhold : Quantity
+    vbar : |Quantity|
+    vhold : |Quantity|
 
     Other Parameters
     ----------------
-    minsigma : Quantity
-    m_unit : :class:`~astropy.units.Unit`
-    sig_unit : :class:`~astropy.units.Unit`
+    minsigma : |Quantity|, optional
+    m_unit : :class:`~astropy.units.Unit`, optional
+    sig_unit : :class:`~astropy.units.Unit`, optional
 
     Notes
     -----
-    this is not a particularly efficient calculation method.
+    This calculation can be slow.
+
+    .. |Quantity| replace:: :class:`~astropy.units.Quantity`
 
     """
     Mxs, vbar, Vhold = calculate_Mx(

@@ -180,12 +180,19 @@ class solar_system_vesc_params(ScienceState):
     # /def
 
 
+# /class
+
 # -------------------------------------------------------------------
 
 
-vesc_sun_at_earth = (
-    42.1 * _KMS
-)  # https://en.wikipedia.org/wiki/Escape_velocity
+vesc_sun_at_earth = 42.1 * _KMS
+"""Solar escape velocity, from 1 AU to infinity [1]_.
+
+References
+----------
+.. [1] https://en.wikipedia.org/wiki/Escape_velocity
+
+"""
 
 
 # -------------------------------------------------------------------
@@ -203,12 +210,15 @@ def vesc_sun_at_R(R):
 
     Parameters
     ----------
-    R : Distance
-        from the sun.
+    R : :class:`~astropy.coordinates.Distance` or |Quantity|
+        From the sun.
 
     Returns
     -------
-    vesc : Quantity
+    vesc : |Quantity|
+        Same shape as `R`
+
+    .. |Quantity| replace:: :class:`~astropy.units.Quantity`
 
     """
     ratio = R.to_value(u.AU)  # b/c r_earth = 1 AU
