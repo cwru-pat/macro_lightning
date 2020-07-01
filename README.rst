@@ -1,9 +1,9 @@
 Constraints from Macro-Induced Lightning
 ========================================
 
-Welcome to ``macro_lightning``, the code-base for a paper on constraining macroscopic dark matter models with observations of lightning on Earth and Jupiter. If you are looking for the paper, the peer-reviewed journal article will be linked here `here <https://journals.aps.org/prd/>`_ and the arxiv pre-print `here <https://arxiv.org/abs/2006.16272>`_. Alternatively, the source code for the paper is included as a sub-module in the folder `papers_and_presentations/paper </papers_and_presentations/>`_.
+Welcome to ``macro_lightning``, the code-base for a paper on constraining macroscopic dark matter models with observations of lightning on Earth and Jupiter. If you are looking for the paper, the peer-reviewed journal article will be `linked here <https://journals.aps.org/prd/>`_ and the `arXiv preprint here <https://arxiv.org/abs/2006.16272>`_. Alternatively, the source code for the paper is included as a sub-module in the folder "papers_and_presentations/paper".
 
-Macroscopic dark matter (macros) is a broad class of alternative candidates to particle dark matter. These candidates would transfer energy to matter primarily through elastic scattering. A sufficiently large macro passing through the atmosphere would produce a straight channel of ionized plasma. If the cross-section of the macro is :math:`\sigma_x \gtrapprox 6 \times 10^{-9} \rm{cm}^2`, then under atmospheric conditions conducive to lightning (eg. a thunderstorm) the plasma channel would be sufficient to seed a lightning strike with a single leader.
+Macroscopic dark matter (macros) is a broad class of alternative candidates to particle dark matter. These candidates would transfer energy to matter primarily through elastic scattering. A sufficiently large macro passing through the atmosphere would produce a straight channel of ionized plasma. If the cross-section of the macro is ``\sigma_x \gtrapprox 6 \times 10^{-9} \rm{cm}^2``, then under atmospheric conditions conducive to lightning (eg. a thunderstorm) the plasma channel would be sufficient to seed a lightning strike with a single leader.
 
 This is entirely unlike ordinary bolt lightning in which a long sequence of hundreds or thousands of few-meter-long leaders are strung together. This macro-induced lightning would be extremely straight, and thus highly distinctive. Neither wind shear nor magnetohydrodynamic instabilities would markedly spoil its straightness. The only photographically documented case of a straight lightning bolt is probably not straight enough to have been macro-induced.
 
@@ -63,11 +63,13 @@ Copyright 2020 - Nathaniel Starkman, Jagjit Sidhu, Harrison Winch, Glenn Starkan
 
 ``macro_lightning`` is free software made available under the BSD-3 License. For details see the `LICENSE <https://github.com/cwru-pat/macro_lightning/blob/master/LICENSE>`_ file.
 
-If you make use of this code, please consider citing the Zenodo DOI as a software citation::
+If you make use of this code, please consider citing the Zenodo DOI as a software citation
+
+::
 
    @software{macro_lightning:zenodo,
      author       = {Nathaniel Starkman and Jagjit Sidhu and Harrison Winch and Glenn Starkman},
-     title        = {Constraints from Macro-Induced Lightning},
+     title        = "Constraints from Macro-Induced Lightning",
      publisher    = {Zenodo},
      doi          = {10.5281/zenodo.3911476},
      url          = {https://zenodo.org/badge/latestdoi/275470390}
