@@ -1,7 +1,7 @@
 Constraints from Macro-Induced Lightning
 ========================================
 
-Welcome to ``macro_lightning``, the code-base for a paper on constraining macroscopic dark matter models with observations of lightning on Earth and Jupiter. If you are looking for the paper, the peer-reviewed journal article can be found `here <www.google.com>`_ (TODO add link) and the arxiv pre-print `here <https://arxiv.org>`_ (TODO add link). Alternatively, the source code for the paper is included as a sub-module in the folder "papers_and_presentations/paper".
+Welcome to ``macro_lightning``, the code-base for a paper on constraining macroscopic dark matter models with observations of lightning on Earth and Jupiter. If you are looking for the paper, the peer-reviewed journal article will be linked here `here <https://journals.aps.org/prd/>`_ and the arxiv pre-print `here <https://arxiv.org/abs/2006.16272>`_. Alternatively, the source code for the paper is included as a sub-module in the folder `papers_and_presentations/paper </papers_and_presentations/>`_.
 
 Macroscopic dark matter (macros) is a broad class of alternative candidates to particle dark matter. These candidates would transfer energy to matter primarily through elastic scattering. A sufficiently large macro passing through the atmosphere would produce a straight channel of ionized plasma. If the cross-section of the macro is :math:`\sigma_x \gtrapprox 6 \times 10^{-9} \rm{cm}^2`, then under atmospheric conditions conducive to lightning (eg. a thunderstorm) the plasma channel would be sufficient to seed a lightning strike with a single leader.
 
