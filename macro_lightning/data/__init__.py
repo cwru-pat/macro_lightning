@@ -11,7 +11,7 @@ __all__ = [
     "load_whitedwarf_constraints",
     "load_dfn_constraints",
     "load_dfn_future_constraints",
-    "load_whitedwarf_constraints"
+    "load_whitedwarf_constraints",
 ]
 
 
@@ -30,13 +30,13 @@ import numpy as np
 from astropy.table import Table
 
 
-# PROJECT-SPECIFIC
-
-
 ##############################################################################
 # PARAMETERS
 
 _data_dir = pathlib.Path(__file__).parent
+
+# three tuples type
+_3Sequence = T.Tuple[T.Sequence, T.Sequence, T.Sequence]
 
 
 ##############################################################################
@@ -127,9 +127,7 @@ def load_superbursts_polygons() -> T.Tuple[T.Sequence, T.Sequence]:
 # -------------------------------------------------------------------
 
 
-def load_humandeath_constraints() -> T.Tuple[
-    T.Sequence, T.Sequence, T.Sequence
-]:
+def load_humandeath_constraints() -> _3Sequence:
     r"""Constraint data from dark matter caused human deaths.
 
     Macroscopic dark matter (macros) refers to a class of dark matter
@@ -175,7 +173,7 @@ def load_humandeath_constraints() -> T.Tuple[
 # -------------------------------------------------------------------
 
 
-def load_dfn_constraints() -> T.Tuple[T.Sequence, T.Sequence, T.Sequence]:
+def load_dfn_constraints() -> _3Sequence:
     r"""Constraint data from Desert Fireball Network (DFN).
 
     Constraints for low mass macros from the null observation of bright
@@ -218,9 +216,7 @@ def load_dfn_constraints() -> T.Tuple[T.Sequence, T.Sequence, T.Sequence]:
 # -------------------------------------------------------------------
 
 
-def load_dfn_future_constraints() -> T.Tuple[
-    T.Sequence, T.Sequence, T.Sequence
-]:
+def load_dfn_future_constraints() -> _3Sequence:
     r"""Constraint data from Desert Fireball Network (DFN).
 
     Constraints for low mass macros from the null observation of bright
