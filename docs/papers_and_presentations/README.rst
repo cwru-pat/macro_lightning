@@ -69,12 +69,12 @@ Citations:
 
 .. _presentation-astro-ph:
 
-`UofT Astro-Ph`_
-----------------
+UofT Astro-Ph
+-------------
 
 .. _UofT Astro-Ph: UofT%20Astro-Ph
 
-.. image:: UofT%20Astro-Ph/figures/front-image.png
+.. image:: UofT_Astro-Ph/figures/front-image.png
 	:target: https://docs.google.com/presentation/d/e/2PACX-1vTI8d41bkTyKu3zCwy86e7K5bkGmoKphf2rb6OeCQZNYnecoO2qLPaXyUE5TZqYHNrKOgoAIDeVQV3t/embed?start=true&loop=true&delayms=15000
 
 ..
@@ -84,3 +84,19 @@ Citations:
 
 .. |Macro Lightning DOI| image:: https://zenodo.org/badge/275470390.svg
    :target: https://zenodo.org/badge/latestdoi/275470390
+
+
+
+.. _presentation-cosmos-from-your-couch:
+
+`Cosmos From Your Couch`_
+--------------------------
+
+.. _Cosmos From Your Couch: https://youtu.be/BMx37lWvnIo?t=1267
+
+August 4, 2020 presentation by Harrison Winch.
+
+.. image:: cosmos_from_your_couch/figures/cosmos_from_your_couch.jpg
+	:target: https://youtu.be/BMx37lWvnIo?t=1267
+	:align: center
+	:scale: 120 %

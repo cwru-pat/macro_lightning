@@ -24,7 +24,7 @@ All contributors (alphabetical last name):
 Credits
 =======
 
-* Nathaniel Starkman: `project_template <https://github.com/cwru-pat/project_template>`_
+* Nathaniel Starkman: `project_template <https://github.com/nstarman/project_template>`_
 * Astropy: `package template <https://github.com/astropy/package-template>`_
   
 
