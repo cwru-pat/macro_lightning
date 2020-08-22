@@ -67,6 +67,7 @@ Citations:
 	}
 
 
+
 .. _presentation-astro-ph:
 
 UofT Astro-Ph
@@ -96,7 +97,32 @@ UofT Astro-Ph
 
 August 4, 2020 presentation by Harrison Winch.
 
-.. image:: cosmos_from_your_couch/figures/cosmos_from_your_couch.jpg
+.. image:: cosmos_from_your_couch/figures/cosmos_from_your_couch.png
 	:target: https://youtu.be/BMx37lWvnIo?t=1267
 	:align: center
-	:scale: 120 %
+	:alt: Cosmos From Your Couch presentation by Harrison Winch
+
+
+
+.. _presentation-jhu_journal_club:
+
+JHU Journal Club
+----------------
+
+August 24, 2020 presentation by [Nathaniel Starkman](https://github.com/nstarman).
+
+.. _JHU_Journal-Club: JHU-Journal-Club
+
+.. image:: JHU_Journal_Club/figures/front-image.png
+	:target: https://docs.google.com/presentation/d/e/2PACX-1vTI0qYAhM1s56dwe_cwnElW4g36L7nBrPp8Fsq1whiIQEXgrUqN_WyZMJWw43VUZ5wejJh69P__xBFQ/pub?start=false&loop=false&delayms=60000&slide=id.g742e3e7cd_1_16
+
+..
+	RST COMMANDS BELOW
+
+
+.. BADGES
+
+.. |Macro Lightning DOI| image:: https://zenodo.org/badge/275470390.svg
+   :target: https://zenodo.org/badge/latestdoi/275470390
+
+
