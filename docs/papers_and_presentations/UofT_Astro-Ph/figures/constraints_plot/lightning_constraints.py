@@ -94,7 +94,7 @@ r"""Paper Eqn. 7, setting $\lambda_e^{macro} \geq \lambda_e^{natural}$."""
 
 try:
     if load_saved:
-        macro = QTable.read("macro_msig_earth.asdf", format="asdf")
+        macro = QTable.read("macro_msig_earth.ecsv", format="ecsv")
     else:
         raise Exception("load_saved = False")
 
@@ -118,7 +118,7 @@ except Exception as e:
     )
 
     macro = QTable([massE, sigmaE], names=["mass", "sigma"])
-    macro.write("macro_msig_earth.asdf", format="asdf")
+    macro.write("macro_msig_earth.ecsv", format="ecsv")
 
 else:
     massE = macro["mass"]
@@ -158,7 +158,7 @@ ArhoJ = 2e5 / 3 * (u.g * u.s / u.m)
 
 try:
     if load_saved:
-        macro = QTable.read("macro_msig_jupiter.asdf", format="asdf")
+        macro = QTable.read("macro_msig_jupiter.ecsv", format="ecsv")
     else:
         raise Exception("load_saved = False")
 
@@ -182,7 +182,7 @@ except Exception as e:
     )
 
     macro = QTable([massJ, sigmaJ], names=["mass", "sigma"])
-    macro.write("macro_msig_jupiter.asdf", format="asdf")
+    macro.write("macro_msig_jupiter.ecsv", format="ecsv")
 
 else:
     massJ = macro["mass"]

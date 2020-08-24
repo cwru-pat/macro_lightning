@@ -73,19 +73,12 @@ Citations:
 UofT Astro-Ph
 -------------
 
+Jul 15, 2020 presentation by Nathaniel Starkman and Harrison Winch.
+
 .. _UofT Astro-Ph: UofT%20Astro-Ph
 
 .. image:: UofT_Astro-Ph/figures/front-image.png
 	:target: https://docs.google.com/presentation/d/e/2PACX-1vTI8d41bkTyKu3zCwy86e7K5bkGmoKphf2rb6OeCQZNYnecoO2qLPaXyUE5TZqYHNrKOgoAIDeVQV3t/embed?start=true&loop=true&delayms=15000
-
-..
-	RST COMMANDS BELOW
-
-.. BADGES
-
-.. |Macro Lightning DOI| image:: https://zenodo.org/badge/275470390.svg
-   :target: https://zenodo.org/badge/latestdoi/275470390
-
 
 
 .. _presentation-cosmos-from-your-couch:
@@ -109,7 +102,7 @@ August 4, 2020 presentation by Harrison Winch.
 JHU Journal Club
 ----------------
 
-August 24, 2020 presentation by [Nathaniel Starkman](https://github.com/nstarman).
+August 24, 2020 presentation by `Nathaniel Starkman <https://github.com/nstarman>`_.
 
 .. _JHU_Journal-Club: JHU-Journal-Club
 
