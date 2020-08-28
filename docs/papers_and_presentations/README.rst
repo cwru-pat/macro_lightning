@@ -8,6 +8,8 @@ Papers and Presentations
 `Paper`_
 --------
 
+|Software DOI|
+
 .. _Paper: https://github.com/nstarman/macro_lightning_paper/tree/master
 
 Abstract:
@@ -115,7 +117,7 @@ August 24, 2020 presentation by `Nathaniel Starkman <https://github.com/nstarman
 
 .. BADGES
 
-.. |Macro Lightning DOI| image:: https://zenodo.org/badge/275470390.svg
+.. |Software DOI| image:: https://zenodo.org/badge/275470390.svg
    :target: https://zenodo.org/badge/latestdoi/275470390
 
 
