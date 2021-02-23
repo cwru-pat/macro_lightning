@@ -43,14 +43,16 @@ Many of the sources cited in the paper are downloaded and included here.
 How to contribute
 *****************
 
-|Milestones| |Open Issues| |Last Commit|
+|Milestones| |Open Issues| |Last Commit| |Template|
 
 We welcome contributions from anyone via pull requests on `GitHub
 <https://github.com/cwru-pat/macro_lightning>`_. If you don't feel comfortable modifying or
 adding functionality, we also welcome feature requests and bug reports as
 `GitHub issues <https://github.com/cwru-pat/macro_lightning/issues>`_.
 
-The development process follows that of the `astropy-package-template <https://docs.astropy.org/en/latest/development/astropy-package-template.html>`_ from Astropy's `release procedure <https://docs.astropy.org/en/latest/development/releasing.html#release-procedure>`_.
+The development process follows that of the `astropy affiliate packages <https://docs.astropy.org/en/latest/development/astropy-package-template.html>`_ from Astropy's `release procedure <https://docs.astropy.org/en/latest/development/releasing.html#release-procedure>`_.
+
+The package template is `nstarman project_template <https://github.com/nstarman/project_template>`_ (above Zenodo), forked from the `astropy package template <https://github.com/astropy/package-template>`_.
 
 
 ***********
@@ -106,3 +108,6 @@ If you make use of this code, please consider citing the Zenodo DOI as a softwar
 
 .. |Coveralls| image:: https://coveralls.io/repos/github/cwru-pat/macro_lightning/badge.svg?branch=master
    :target: https://coveralls.io/github/cwru-pat/macro_lightning?branch=master
+
+.. |Template| image:: https://zenodo.org/badge/248265485.svg
+   :target: https://zenodo.org/badge/latestdoi/248265485

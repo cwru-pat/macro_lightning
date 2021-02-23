@@ -4,7 +4,6 @@ numpy
 pytest
 pytest-astropy
 pytest-mpl
-scipy
 tqdm
 typing_extensions
 utilipy

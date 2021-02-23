@@ -17,6 +17,7 @@ __all__ = [
 
 import typing as T
 
+
 # THIRD PARTY
 
 from astropy.utils.state import ScienceState
