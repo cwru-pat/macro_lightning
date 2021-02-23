@@ -14,7 +14,7 @@ All code and data is available on a `public repository on GitHub <https://github
 
 .. container::
 
-   |DOI| |PyPI| |Build Status| |Coveralls| |astropy|
+   |DOI| |PyPI| |Build Status| |Coverage| |astropy|
 
 
 *************
@@ -132,5 +132,5 @@ Project details
 .. |Last Commit| image:: https://img.shields.io/github/last-commit/cwru-pat/macro_lightning/master?style=flat
    :alt: GitHub last commit (branch)
 
-.. |Coveralls| image:: https://coveralls.io/repos/github/cwru-pat/macro_lightning/badge.svg?branch=master
-   :target: https://coveralls.io/github/cwru-pat/macro_lightning?branch=master
+.. |Coverage| image:: https://Coverage.io/repos/github/cwru-pat/macro_lightning/badge.svg?branch=master
+   :target: https://Coverage.io/github/cwru-pat/macro_lightning?branch=master

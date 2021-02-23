@@ -6,10 +6,10 @@ Plot (`macro_lightning.plot`)
 
 .. currentmodule:: macro_lightning.plot
 
-This module provides functions to plot macro phase-space constraints. Of particular note is `~constraints_plot` which allows very easy creation of a standardized constraint plot.
+This module provides functions to plot macro phase-space constraints. Of particular note is :func:`~constraints_plot` which allows very easy creation of a standardized constraint plot.
 
 .. code-block:: python
-	
+
 	with plot.constraints_plot(
 	    m_arr=m_arr, sigmin=sigmin, sigmax=sigmax,
 	    all_constrs=True, constr_labels=True,

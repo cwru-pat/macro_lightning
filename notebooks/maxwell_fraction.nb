@@ -21,28 +21,28 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell[BoxData[
- RowBox[{"N", "[", 
-  RowBox[{"Integrate", "[", 
+ RowBox[{"N", "[",
+  RowBox[{"Integrate", "[",
    RowBox[{
-    RowBox[{"PDF", "[", 
+    RowBox[{"PDF", "[",
      RowBox[{
-      RowBox[{"MaxwellDistribution", "[", "a", "]"}], ",", " ", "x"}], "]"}], 
-    ",", " ", 
-    RowBox[{"{", 
-     RowBox[{"x", ",", " ", 
+      RowBox[{"MaxwellDistribution", "[", "a", "]"}], ",", " ", "x"}], "]"}],
+    ",", " ",
+    RowBox[{"{",
+     RowBox[{"x", ",", " ",
       RowBox[{
-       SqrtBox["2"], "a"}], ",", " ", "Infinity"}], "}"}], ",", " ", 
-    RowBox[{"Assumptions", "\[Rule]", 
+       SqrtBox["2"], "a"}], ",", " ", "Infinity"}], "}"}], ",", " ",
+    RowBox[{"Assumptions", "\[Rule]",
      RowBox[{"a", ">", "0"}]}]}], "]"}], "]"}]], "Input",
  CellChangeTimes->{{3.8012495374786873`*^9, 3.801249696191592*^9}, {
-  3.801249732946611*^9, 3.8012497402219353`*^9}, {3.80124981144836*^9, 
+  3.801249732946611*^9, 3.8012497402219353`*^9}, {3.80124981144836*^9,
   3.8012498131509953`*^9}},
  CellLabel->"In[1]:=",ExpressionUUID->"d49dc63e-f3cb-44be-a566-f31f3a39e79d"],
 
 Cell[BoxData["0.5724067044708798`"], "Output",
  CellChangeTimes->{
   3.801249542268395*^9, 3.8012495831062527`*^9, 3.8012496137589817`*^9, {
-   3.801249669547743*^9, 3.80124969664662*^9}, 3.80124974300168*^9, 
+   3.801249669547743*^9, 3.80124969664662*^9}, 3.80124974300168*^9,
    3.801249813973271*^9, 3.801249899362851*^9},
  CellLabel->"Out[1]=",ExpressionUUID->"9b7d345e-00d1-4f18-9e3c-b8a805ddb509"]
 }, Open  ]]
@@ -70,4 +70,3 @@ Cell[1266, 41, 335, 5, 68, "Output",ExpressionUUID->"9b7d345e-00d1-4f18-9e3c-b8a
 }
 ]
 *)
-

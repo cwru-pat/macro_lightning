@@ -3,14 +3,22 @@ include CHANGES.rst
 include setup.cfg
 include LICENSE
 include pyproject.toml
+include tox.ini
+include *.yml
+include *.txt
 
-recursive-include macro_utils *.pyx *.c *.pxd
+recursive-include macro_lightning *.pyx *.c *.pxd *.png
 recursive-include docs *
 recursive-include licenses *
 recursive-include scripts *
 
+exclude discO/version.py
+exclude requirements.txt
+
+prune references
+prune notebooks
 prune build
 prune docs/_build
 prune docs/api
 
-global-exclude *.pyc *.o
+global-exclude *.pyc *.o *.DS_Store *.ipynb_checkpoints/*

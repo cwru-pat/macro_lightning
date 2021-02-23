@@ -119,5 +119,3 @@ August 24, 2020 presentation by `Nathaniel Starkman <https://github.com/nstarman
 
 .. |Software DOI| image:: https://zenodo.org/badge/275470390.svg
    :target: https://zenodo.org/badge/latestdoi/275470390
-
-

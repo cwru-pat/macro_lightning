@@ -36,21 +36,17 @@ __all__ = [
 
 # BUILT-IN
 
-from contextlib import contextmanager
+# BUILT-IN
 import typing as T
+from contextlib import contextmanager
 
 # THIRD PARTY
-
+import numpy as np
 from matplotlib import pyplot
 
-import numpy as np
-
-
 # PROJECT-SPECIFIC
-
-from .physics import atomic_density, nuclear_density, black_hole, CMB, LMCTop
 from . import data
-
+from .physics import CMB, LMCTop, atomic_density, black_hole, nuclear_density
 
 ##############################################################################
 # PARAMETERS
@@ -257,7 +253,8 @@ def plot_reference_densities(mass: T.Sequence, label: bool = True):
 
 
 def plot_mica_constraints(
-    points: T.Optional[T.Sequence] = None, label: bool = False
+    points: T.Optional[T.Sequence] = None,
+    label: bool = False,
 ):
     r"""Plot Constraints from Mica.
 
@@ -334,7 +331,8 @@ def plot_mica_constraints(
 
 
 def plot_white_dwarf_constraints(
-    points: T.Optional[T.Sequence] = None, label=False
+    points: T.Optional[T.Sequence] = None,
+    label=False,
 ):
     r"""Plot Constraints from the existence of massive White Dwarfs.
 
@@ -506,7 +504,9 @@ def plot_superbursts_constraints(
 
 
 def plot_cmb_constraints(
-    m_arr: T.Sequence, sigmax: float, label: bool = False
+    m_arr: T.Sequence,
+    sigmax: float,
+    label: bool = False,
 ):
     r"""Plot Constraints from the CMB.
 
@@ -726,7 +726,8 @@ def plot_dfn_constraints(
 
 
 def plot_lensing_constraints(
-    Mmicro: T.Optional[T.Sequence] = None, label=False
+    Mmicro: T.Optional[T.Sequence] = None,
+    label=False,
 ):
     r"""Plot Constraints from microlensing of the LMC.
 
@@ -786,7 +787,9 @@ def plot_lensing_constraints(
 
 
 def plot_black_hole_constraints(
-    m_arr: T.Sequence, sigmin: float, label: bool = False
+    m_arr: T.Sequence,
+    sigmin: float,
+    label: bool = False,
 ):
     r"""Plot Constraints from Black Holes.
 

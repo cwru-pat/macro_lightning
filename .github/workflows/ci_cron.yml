@@ -1,0 +1,104 @@
+name: CI - Cron
+
+#########################
+# Run Conditions
+
+on:
+  schedule:
+    - cron:  '0 6 * * 1'  # run every Monday at 6am UTC
+
+
+#########################
+# Environment Variables
+# TODO!
+
+# env:  # Set defaults to avoid repeating in most cases
+
+#   # By default, we run our jobs with 'ubuntu-latest'
+#   os: ubuntu-latest
+
+
+#########################
+# The Tests
+
+jobs:
+
+  # job-id
+  tests:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      max-parallel: 10
+
+      matrix:
+        include:
+
+          # We check numpy-dev also in a job that only runs from cron, so that
+          # we can spot issues sooner. We do not use remote data here, since
+          # that gives too many false positives due to URL timeouts. We also
+          # install all dependencies via pip here so we pick up the latest
+          # releases.
+          - name: Python 3.7 with dev version of key dependencies
+            os: ubuntu-latest
+            python: 3.7
+            toxenv: py37-test-devdeps
+
+          - name: Documentation link check
+            os: ubuntu-latest
+            python: 3.7
+            toxenv: linkcheck
+
+          - name: Bundling with pyinstaller
+            os: ubuntu-latest
+            python: 3.8
+            toxenv: pyinstaller
+
+          # Test against Python dev in cron job.
+          - name: Python dev with basic dependencies
+            os: ubuntu-latest
+            python: 3.10-dev
+            toxenv: pydev-test
+
+          - name: Style check - black
+            os: ubuntu-latest
+            python: 3.8
+            toxenv: py38-black
+
+          - name: mypy check
+            os: ubuntu-latest
+            python: 3.8
+            toxenv: py38-mypy
+
+          - name: Unused code check
+            os: ubuntu-latest
+            python: 3.8
+            toxenv: py38-unused_code
+
+
+    steps:
+    # --------------------
+    # Setup
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Set up Python ${{ matrix.python }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python }}
+    - name: Install linkcheck dependencies
+      if: ${{ matrix.toxenv == 'linkcheck' }}
+      run: |
+        sudo apt-get install graphviz
+        sudo apt-get install pandoc
+    - name: Install base dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install --upgrade tox codecov
+
+    # --------------------
+    # Run Tests
+    - name: Run tests
+      run: tox ${{ matrix.toxargs}} -e ${{ matrix.toxenv}} -- ${{ matrix.toxposargs}}

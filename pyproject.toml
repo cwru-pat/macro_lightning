@@ -1,8 +1,23 @@
 [build-system]
+requires = [ "setuptools", "setuptools_scm", "extension_helpers", "wheel",]
+build-backend = "setuptools.build_meta"
 
-requires = ["setuptools",
-            "setuptools_scm",
-            "extension_helpers",
-            "wheel"]
+[tool.isort]
+line_length = 79
+multi_line_output = 3
+include_trailing_comma = "True"
+force_grid_wrap = 0
+use_parentheses = "True"
+ensure_newline_before_comments = "True"
+sections = [ "FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER",]
+known_third_party = ["astropy", "matplotlib", "numpy", "pytest", "setuptools", "tqdm"]
+known_localfolder = "macro_lightning"
+import_heading_stdlib = "BUILT-IN"
+import_heading_thirdparty = "THIRD PARTY"
+import_heading_firstparty = "FIRST PARTY"
+import_heading_localfolder = "PROJECT-SPECIFIC"
 
-build-backend = 'setuptools.build_meta'
+[tool.black]
+line-length = 79
+include = "\\.pyi?$"
+exclude = "/(\n    \\.git\n  | \\.hg\n  | \\.mypy_cache\n  | \\.tox\n  | \\.venv\n  | _build\n  | buck-out\n  | build\n  | dist\n)/\n"

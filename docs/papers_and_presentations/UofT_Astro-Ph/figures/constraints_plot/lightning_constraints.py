@@ -28,19 +28,16 @@ __status__ = "Pre-Print"
 # IMPORTS
 
 # THIRD PARTY
-
-from astropy import units as u
-from astropy.table import QTable
 import matplotlib.pyplot as plt
 import numpy as np
+from astropy import units as u
+from astropy.table import QTable
 
-
-# PROJECT SPECIFIC
-
-from macro_lightning import plot, physics as ph
+# PROJECT-SPECIFIC
 from macro_lightning import parameters
-from macro_lightning.utils import qnorm, qarange
-
+from macro_lightning import physics as ph
+from macro_lightning import plot
+from macro_lightning.utils import qarange, qnorm
 
 ##############################################################################
 # PARAMETERS

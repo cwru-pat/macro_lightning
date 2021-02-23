@@ -16,15 +16,13 @@ __all__ = [
 
 # THIRD PARTY
 
+# THIRD PARTY
 import astropy.units as u
 import numpy as np
 import pytest
 
-
 # PROJECT-SPECIFIC
-
 from .. import utils
-
 
 ##############################################################################
 # PARAMETERS

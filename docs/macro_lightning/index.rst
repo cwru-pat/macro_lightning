@@ -1,6 +1,6 @@
-***************************
-`macro_lightning` on import
-***************************
+*****************************
+``macro_lightning`` on import
+*****************************
 
 This is the documentation for the top-level of ``macro_lightning``, ie, what happens on import.
 

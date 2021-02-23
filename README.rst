@@ -11,7 +11,7 @@ For any discussion or derivations, see the paper. For code documentation, see `R
 
 .. container::
 
-   |DOI| |PyPI| |Build Status| |Coveralls| |astropy|
+   |DOI| |PyPI| |Build Status| |Coverage| |astropy|
 
 
 Notebooks
@@ -104,5 +104,5 @@ If you make use of this code, please consider citing the Zenodo DOI as a softwar
 .. |Last Commit| image:: https://img.shields.io/github/last-commit/cwru-pat/macro_lightning/master?style=flat
    :alt: GitHub last commit (branch)
 
-.. |Coveralls| image:: https://coveralls.io/repos/github/cwru-pat/macro_lightning/badge.svg?branch=master
+.. |Coverage| image:: https://coveralls.io/repos/github/cwru-pat/macro_lightning/badge.svg?branch=master
    :target: https://coveralls.io/github/cwru-pat/macro_lightning?branch=master

@@ -14,16 +14,12 @@ __all__ = [
 # IMPORTS
 
 # BUILT-IN
-
 import typing as T
 
 # THIRD PARTY
-
-from astropy.utils.state import ScienceState
-from astropy import units as u
-
 import numpy as np
-
+from astropy import units as u
+from astropy.utils.state import ScienceState
 
 ##############################################################################
 # PARAMETERS
@@ -86,7 +82,7 @@ class solar_system_vesc_params(ScienceState):
                 "Neptune": (_ref_B, _ref_C, _ref_D),
                 "Pluto": (_ref_B, _ref_C, _ref_D),
             },
-        }
+        },
     }
 
     @classmethod
@@ -107,7 +103,7 @@ class solar_system_vesc_params(ScienceState):
         else:
             raise ValueError(
                 f"Invalid string input to retrieve solar "
-                f'parameters for Galactocentric frame: "{arg}"'
+                f'parameters for Galactocentric frame: "{arg}"',
             )
 
         return info["params"], info["references"]
@@ -131,7 +127,7 @@ class solar_system_vesc_params(ScienceState):
         else:
             raise ValueError(
                 "Invalid input to retrieve solar parameters."
-                "Input must be a string, or dict"
+                "Input must be a string, or dict",
             )
 
     # /def
