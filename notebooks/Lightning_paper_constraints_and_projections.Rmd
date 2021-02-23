@@ -110,6 +110,8 @@ We first perform the integral $$\Gamma(M_x, \sigma_x) T = A_{det}\frac{\rho_{DM}
 
 from https://arxiv.org/pdf/1908.00557.pdf
 
+For an observation period of two years.
+
 ```{python}
 # from https://ssd.jpl.nasa.gov/?planet_phys_par
 vesc_sun_at_earth = 42.1 * u.km / u.s
@@ -119,6 +121,7 @@ vminE = qnorm(vesc_sun_at_earth, vesc_earth)
 vminE
 
 # A_{det}*\rho_{DM}*T; the quantity outside the integral
+# this includes the 30% alignment factor
 ArhoE = 3 * u.g * u.s / u.m
 
 sigma_factor_earth = 1e8 * (u.cm ** 2 / u.s) ** 2
@@ -206,9 +209,6 @@ plt.show();
 
 ## Jupiter
 
-
-needs to be redone
-
 ```{python}
 sigma_factor = 5e8 * (u.cm**2 / u.s) ** 2
 r"""Paper Eqn. 7, setting $\lambda_e^{macro} \geq \lambda_e^{natural}$.""";
@@ -223,6 +223,7 @@ vminJ = qnorm(vesc_sun_at_earth, vesc_jupiter)
 vminJ
 
 # A_{det}*\rho_{DM}*T; the quantity outside the integral
+# this includes the 30% alignment factor
 ArhoJ = 2e5 / 3 * (u.g * u.s / u.m)
 
 ```
