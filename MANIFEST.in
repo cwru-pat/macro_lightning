@@ -17,14 +17,15 @@ recursive-include scripts *
 
 exclude macro_lightning/version.py
 exclude requirements.txt
+exclude docs/papers_and_presentations/paper
 exclude docs/papers_and_presentations/paper/.git
 exclude .git
 
-prune docs/papers_and_presentations/paper
 prune references
 prune notebooks
 prune build
 prune docs/_build
 prune docs/api
+prune docs/papers_and_presentations/paper
 
-global-exclude *.pyc *.o *.DS_Store *.ipynb_checkpoints/*
+global-exclude *.pyc *.o *.DS_Store *.ipynb_checkpoints/* *.git
