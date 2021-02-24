@@ -136,5 +136,5 @@ Project details
 .. |Last Commit| image:: https://img.shields.io/github/last-commit/cwru-pat/macro_lightning/master?style=flat
    :alt: GitHub last commit (branch)
 
-.. |Coverage| image:: https://Coverage.io/repos/github/cwru-pat/macro_lightning/badge.svg?branch=master
-   :target: https://Coverage.io/github/cwru-pat/macro_lightning?branch=master
+.. |Coverage| image:: https://codecov.io/gh/nstarman/macro_lightning/branch/master/graph/badge.svg?token=68JTMI17HY
+   :target: https://codecov.io/gh/nstarman/macro_lightning
