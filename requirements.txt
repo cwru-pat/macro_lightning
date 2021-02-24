@@ -1,7 +1,4 @@
-###### Requirements with Version Specifiers ######`
 astropy >= 4.0
-
-###### Requirements without Version Specifiers ######`
 matplotlib
 numpy
 pytest

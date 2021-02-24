@@ -8,6 +8,7 @@ include *.yml
 include *.yaml
 include *.txt
 include .gitmodules
+include .mailmap
 
 recursive-include macro_lightning *.pyx *.c *.pxd *.png
 recursive-include docs *
