@@ -35,7 +35,7 @@ This notebook contains the calculations for how well macro-induced lightnint on 
 
 <br><br>
 
-- - - 
+- - -
 
 
 
@@ -99,7 +99,7 @@ min_sigma = 6e-8 * u.cm ** 2
 
 <br><br>
 
-- - - 
+- - -
 
 
 
@@ -179,10 +179,10 @@ and so would not be detectable.
 
 ```python
 with plot.constraints_plot(m_arr, sigmin=sigmin):
-    
+
     plt.fill_between(
         massE, sigmaE, upperlightning,
-        where=None, 
+        where=None,
         facecolor='none',
         edgecolor='black',
         hatch="\\",
@@ -195,7 +195,7 @@ with plot.constraints_plot(m_arr, sigmin=sigmin):
     sel = lim > sigmaE
     plt.fill_between(
         massE[sel], sigmaE[sel], lim[sel],
-        where=None, 
+        where=None,
         facecolor='none',
         edgecolor='gray',
         hatch=r"//",
@@ -322,7 +322,7 @@ with plot.constraints_plot(
 
     plt.fill_between(
         massE, sigmaE, upperlightning,
-        where=None, 
+        where=None,
         facecolor='none',
         edgecolor='black',
         hatch="\\",
@@ -335,7 +335,7 @@ with plot.constraints_plot(
     sel = lim > sigmaE
     plt.fill_between(
         massE[sel], sigmaE[sel], lim[sel],
-        where=None, 
+        where=None,
         facecolor='none',
         edgecolor='gray',
         hatch=r"//",
@@ -365,7 +365,7 @@ plt.show();
 
 <br><br>
 
-- - - 
+- - -
 
 <span style='font-size:40px;font-weight:650'>
     END

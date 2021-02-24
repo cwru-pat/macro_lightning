@@ -225,7 +225,7 @@ escape them both is, under simplified assumptions:
     = \sqrt{\left(k v_{e2}\right)^2 + v_{e1}^2}
 
 where :math:`k=1−1/\sqrt{2} \sim 0.2929` for circular orbits.
-"""
+""",
 )
 
 
