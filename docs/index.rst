@@ -60,7 +60,9 @@ Examples
 How to contribute
 *****************
 
-|Milestones| |Open Issues| |Last Commit|
+.. container::
+
+   |Milestones| |Open Issues| |Last Commit|
 
 We welcome contributions from anyone via pull requests on `GitHub
 <https://github.com/cwru-pat/macro_lightning>`_. If you don't feel comfortable modifying or
@@ -74,7 +76,9 @@ The development process follows that of the `astropy-package-template <https://d
 Attribution
 ***********
 
-|DOI| |License|
+.. container::
+
+   |DOI| |License|
 
 Copyright 2020 - Nathaniel Starkman, Jagjit Sidhu, Harrison Winch, Glenn Starkan, and contributors.
 

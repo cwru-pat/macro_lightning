@@ -160,6 +160,33 @@ def f_BM_bin(vx, vbin, vvir):
 
 # /def
 
+
+# -------------------------------------------------------------------
+
+
+def sigma_limit_through_earth(mass: u.Quantity) -> u.Quantity:
+    """Calculate the sigma limit for macros passing through the Earth.
+
+    Assuming the PREM model (basically piecewise) model for the Earth.
+
+    .. |Quantity| replace:: `~astropy.units.Quantity`
+
+    Parameters
+    ----------
+    mass : |Quantity|
+        The macro mass
+
+    Returns
+    -------
+    sigma : |Quantity|
+        The limiting cross section
+
+    """
+    sigma = (2e-10 * (u.cm ** 2 / u.g)) * mass
+
+    return sigma << u.cm ** 2
+
+
 # -------------------------------------------------------------------
 
 
