@@ -145,11 +145,6 @@ jobs:
             python: 3.8
             toxenv: py38-test-alldeps
 
-          - name: py3.8 - min deps (Windows)
-            os: windows-latest
-            python: 3.8
-            toxenv: py38-test
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -186,7 +181,7 @@ jobs:
       fail-fast: false  # run all the tests, even if one fails
 
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest]
         python: [3.7, 3.8]
 
     steps:
