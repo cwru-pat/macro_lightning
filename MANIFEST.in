@@ -5,6 +5,7 @@ include LICENSE
 include pyproject.toml
 include tox.ini
 include *.yml
+include *.yaml
 include *.txt
 
 recursive-include macro_lightning *.pyx *.c *.pxd *.png
@@ -20,5 +21,6 @@ prune notebooks
 prune build
 prune docs/_build
 prune docs/api
+prune docs/papers_and_presentations/paper
 
 global-exclude *.pyc *.o *.DS_Store *.ipynb_checkpoints/*

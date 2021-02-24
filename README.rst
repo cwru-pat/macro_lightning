@@ -80,8 +80,8 @@ If you make use of this code, please consider citing the Zenodo DOI as a softwar
 .. |astropy| image:: http://img.shields.io/badge/powered%20by-AstroPy-orange.svg?style=flat
    :target: http://www.astropy.org/
 
-.. |Build Status| image:: https://travis-ci.com/cwru-pat/macro_lightning.svg?branch=master
-    :target: https://travis-ci.com/cwru-pat/macro_lightning
+.. |Build Status| image:: https://github.com/cwru-pat/macro_lightning/actions/workflows/ci_tests.yml/badge.svg
+    :target: https://github.com/cwru-pat/macro_lightning/actions/workflows/ci_tests.yml
 
 .. |Documentation Status| image:: https://readthedocs.org/projects/macro_lightning/badge/?version=latest
    :target: https://macro_lightning.readthedocs.io/en/latest/?badge=latest
