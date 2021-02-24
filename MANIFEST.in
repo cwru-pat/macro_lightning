@@ -12,6 +12,7 @@ include .mailmap
 
 recursive-include macro_lightning *.pyx *.c *.pxd *.png
 recursive-include docs *
+recursive-include docs/papers_and_presentations/paper *
 recursive-include licenses *
 recursive-include scripts *
 
