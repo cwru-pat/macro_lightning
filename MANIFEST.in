@@ -12,7 +12,6 @@ include .mailmap
 
 recursive-include macro_lightning *.pyx *.c *.pxd *.png
 recursive-include docs *
-recursive-include docs/papers_and_presentations/paper *
 recursive-include licenses *
 recursive-include scripts *
 
@@ -20,6 +19,7 @@ exclude macro_lightning/version.py
 exclude requirements.txt
 exclude docs/papers_and_presentations/paper/.git
 
+prune docs/papers_and_presentations/paper
 prune references
 prune notebooks
 prune build
