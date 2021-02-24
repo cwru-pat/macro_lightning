@@ -30,17 +30,13 @@ __all__ = [
 
 # import astropy.units as u
 
+# THIRD PARTY
 import matplotlib.pyplot as plt
-
 import numpy as np
-
 import pytest
 
-
 # PROJECT-SPECIFIC
-
 from .. import plot
-
 
 ##############################################################################
 # PARAMETERS

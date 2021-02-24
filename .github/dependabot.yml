@@ -9,3 +9,6 @@ updates:
     directory: "/macro_lightning"
     schedule:
       interval: "daily"
+    # Add reviewers
+    reviewers:
+      - "nstarman"

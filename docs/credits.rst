@@ -19,14 +19,14 @@ All contributors (alphabetical last name):
 * Glenn Starkman
 * Nathaniel Starkman
 * Harrison Winch
-  
+
 
 Credits
 =======
 
 * Nathaniel Starkman: `project_template <https://github.com/nstarman/project_template>`_
 * Astropy: `package template <https://github.com/astropy/package-template>`_
-  
+
 
 .. |Contributors| image:: https://img.shields.io/github/contributors/cwru-pat/macro_lightning?style=flat
    :alt: GitHub contributors

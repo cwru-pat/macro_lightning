@@ -14,15 +14,12 @@ __all__ = [
 
 # THIRD PARTY
 
+# THIRD PARTY
 import astropy.units as u
-
 import pytest
 
-
 # PROJECT-SPECIFIC
-
 from .. import parameters as params
-
 
 ##############################################################################
 # PARAMETERS
@@ -55,7 +52,9 @@ def test_solar_system_vesc_params():
     # test register
     new_params = {k: v + 2 * _KMS for k, v in ss.items()}
     params.solar_system_vesc_params.register(
-        "new", params=new_params, references={"_source": None},
+        "new",
+        params=new_params,
+        references={"_source": None},
     )
 
     # test can set

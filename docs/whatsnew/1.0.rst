@@ -1,12 +1,12 @@
 .. _whatsnew-1.0:
 
-***************************************
-What's New in `macro_lightning` v1.0.X?
-***************************************
+*****************************************
+What's New in ``macro_lightning`` v1.0.X?
+*****************************************
 
 |DOI|
 
-Bug fixes (in X releases) are annotated with `@X`
+Bug fixes (in X releases) are annotated with ``@X``
 
 Overview
 ========
@@ -23,7 +23,7 @@ This release includes:
 * :ref:`whatsnew-1.0-utils`
 
 
-.. _whatsnew-1.0-framework:  
+.. _whatsnew-1.0-framework:
 
 Framework
 =========

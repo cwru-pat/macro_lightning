@@ -1,0 +1,34 @@
+# General Labels
+GitHub:
+  - .github/**/*
+
+Notebooks:
+  - notebooks/**/*
+
+
+# Package Labels
+data:
+  - macro_lightning/data/**
+
+tests:
+  - macro_lightning/tests/**
+
+parameters:
+  - macro_lightning/parameters.py
+
+physics:
+  - macro_lightning/physics.py
+
+plot:
+  - macro_lightning/plot.py
+
+utils:
+  - macro_lightning/utils.py
+
+
+# Docs Labels
+docs:
+  - docs/**/*
+
+papers_and_presentations:
+  - docs/papers_and_presentations/**/*

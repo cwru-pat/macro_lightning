@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Configure Test Suite.
 
 This file is used to configure the behavior of pytest when using the Astropy
@@ -7,27 +8,22 @@ packagename.test
 
 """
 
+# BUILT-IN
 import os
+
+# THIRD PARTY
 import pytest
 
-from astropy.version import version as astropy_version
+try:
+    # THIRD PARTY
+    from pytest_astropy_header.display import (
+        PYTEST_HEADER_MODULES,
+        TESTED_VERSIONS,
+    )
 
-# For Astropy 3.0 and later, we can use the standalone pytest plugin
-if astropy_version < "3.0":
-    from astropy.tests.pytest_plugins import *  # noqa
-
-    del pytest_report_header
     ASTROPY_HEADER = True
-else:
-    try:
-        from pytest_astropy_header.display import (
-            PYTEST_HEADER_MODULES,
-            TESTED_VERSIONS,
-        )
-
-        ASTROPY_HEADER = True
-    except ImportError:
-        ASTROPY_HEADER = False
+except ImportError:
+    ASTROPY_HEADER = False
 
 
 def pytest_configure(config):
@@ -48,6 +44,7 @@ def pytest_configure(config):
         PYTEST_HEADER_MODULES.pop("Pandas", None)
         PYTEST_HEADER_MODULES["scikit-image"] = "skimage"
 
+        # PROJECT-SPECIFIC
         from . import __version__
 
         packagename = os.path.basename(os.path.dirname(__file__))
@@ -68,6 +65,7 @@ def add_units(doctest_namespace):
 
     """
     # import
+    # THIRD PARTY
     import astropy.units
 
     # add to namespace
@@ -77,20 +75,3 @@ def add_units(doctest_namespace):
 
 
 # def
-
-
-# ------------------------------------------------------
-
-
-# Uncomment the last two lines in this block to treat all DeprecationWarnings as
-# exceptions. For Astropy v2.0 or later, there are 2 additional keywords,
-# as follow (although default should work for most cases).
-# To ignore some packages that produce deprecation warnings on import
-# (in addition to 'compiler', 'scipy', 'pygments', 'ipykernel', and
-# 'setuptools'), add:
-#     modules_to_ignore_on_import=['module_1', 'module_2']
-# To ignore some specific deprecation warning messages for Python version
-# MAJOR.MINOR or later, add:
-#     warnings_to_ignore_by_pyver={(MAJOR, MINOR): ['Message to ignore']}
-# from astropy.tests.helper import enable_deprecations_as_exceptions  # noqa
-# enable_deprecations_as_exceptions()

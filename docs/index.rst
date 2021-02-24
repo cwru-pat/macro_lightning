@@ -14,7 +14,7 @@ All code and data is available on a `public repository on GitHub <https://github
 
 .. container::
 
-   |DOI| |PyPI| |Build Status| |Coveralls| |astropy|
+   |DOI| |PyPI| |Build Status| |Coverage| |astropy|
 
 
 *************
@@ -108,8 +108,8 @@ Project details
 .. |astropy| image:: http://img.shields.io/badge/powered%20by-AstroPy-orange.svg?style=flat
    :target: http://www.astropy.org/
 
-.. |Build Status| image:: https://travis-ci.com/cwru-pat/macro_lightning.svg?branch=master
-    :target: https://travis-ci.com/cwru-pat/macro_lightning
+.. |Build Status| image:: https://github.com/cwru-pat/macro_lightning/actions/workflows/ci_tests.yml/badge.svg
+    :target: https://github.com/cwru-pat/macro_lightning/actions/workflows/ci_tests.yml
 
 .. |Documentation Status| image:: https://readthedocs.org/projects/macro_lightning/badge/?version=latest
    :target: https://macro_lightning.readthedocs.io/en/latest/?badge=latest
@@ -132,5 +132,5 @@ Project details
 .. |Last Commit| image:: https://img.shields.io/github/last-commit/cwru-pat/macro_lightning/master?style=flat
    :alt: GitHub last commit (branch)
 
-.. |Coveralls| image:: https://coveralls.io/repos/github/cwru-pat/macro_lightning/badge.svg?branch=master
-   :target: https://coveralls.io/github/cwru-pat/macro_lightning?branch=master
+.. |Coverage| image:: https://Coverage.io/repos/github/cwru-pat/macro_lightning/badge.svg?branch=master
+   :target: https://Coverage.io/github/cwru-pat/macro_lightning?branch=master

@@ -23,25 +23,20 @@ __all__ = [
 
 # BUILT-IN
 
-import itertools
+# BUILT-IN
 import functools
+import itertools
 import typing as T
 
 # THIRD PARTY
-
 import astropy.units as u
+import numpy as np
 from astropy.utils.decorators import format_doc
 from astropy.utils.misc import indent
-
-import numpy as np
-
 from tqdm import tqdm
 
-
 # PROJECT-SPECIFIC
-
 from .utils import as_quantity, qnorm
-
 
 ##############################################################################
 # PARAMETERS
@@ -175,7 +170,8 @@ def _norm_v1_v2(v1: T.Sequence, v2: T.Sequence) -> T.Sequence:
 # /def
 
 
-_multibody_escape_wikipedia = indent(r"""
+_multibody_escape_wikipedia = indent(
+    r"""
 When escaping a compound system, such as a moon orbiting a planet or a
 planet orbiting a sun, a rocket that leaves at escape velocity (ve1) for
 the first (orbiting) body, (e.g. Earth) will not travel to an infinite
@@ -202,12 +198,15 @@ escape them both is, under simplified assumptions:
     = \sqrt{\left(k v_{e2}\right)^2 + v_{e1}^2}
 
 where :math:`k=1−1/\sqrt{2} \sim 0.2929` for circular orbits.
-""")
+""",
+)
 
 
 @format_doc(None, wikipedia=_multibody_escape_wikipedia)
 def twobody_vesc(
-    ve1, ve2, vo: T.Union[None, T.Sequence] = None,
+    ve1,
+    ve2,
+    vo: T.Union[None, T.Sequence] = None,
 ):
     r"""Two-body escape velocity.
 
@@ -259,7 +258,9 @@ def twobody_vesc(
 
 @format_doc(None, wikipedia=_multibody_escape_wikipedia)
 def multibody_vesc(
-    *vescs, vo: T.Union[None, T.Sequence] = None, accumulate: bool = False,
+    *vescs,
+    vo: T.Union[None, T.Sequence] = None,
+    accumulate: bool = False,
 ):
     """Multi-body escape velocity.
 
@@ -426,7 +427,14 @@ def calculate_Mx(vels, vvir, vesc, vcirc, vmin, Arho, m_unit=u.g):
 
 
 def calculate_Sx(
-    vels, vesc, vhold, vcirc, vmin, minsigma, sigma_factor, sig_unit=u.cm ** 2,
+    vels,
+    vesc,
+    vhold,
+    vcirc,
+    vmin,
+    minsigma,
+    sigma_factor,
+    sig_unit=u.cm ** 2,
 ):
     """Calculate Sx.
 

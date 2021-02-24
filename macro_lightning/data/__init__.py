@@ -11,7 +11,7 @@ __all__ = [
     "load_whitedwarf_constraints",
     "load_dfn_constraints",
     "load_dfn_future_constraints",
-    "load_whitedwarf_constraints"
+    "load_whitedwarf_constraints",
 ]
 
 
@@ -20,18 +20,13 @@ __all__ = [
 
 # BUILT IN
 
+# BUILT-IN
 import pathlib
 import typing as T
 
-
 # THIRD PARTY
-
 import numpy as np
 from astropy.table import Table
-
-
-# PROJECT-SPECIFIC
-
 
 ##############################################################################
 # PARAMETERS
@@ -73,7 +68,9 @@ def load_mica_constraints() -> T.Sequence:
 
     """
     points = np.loadtxt(
-        _data_dir.joinpath("mica_polygon.txt"), delimiter=",", skiprows=1
+        _data_dir.joinpath("mica_polygon.txt"),
+        delimiter=",",
+        skiprows=1,
     )
 
     return points
@@ -128,7 +125,9 @@ def load_superbursts_polygons() -> T.Tuple[T.Sequence, T.Sequence]:
 
 
 def load_humandeath_constraints() -> T.Tuple[
-    T.Sequence, T.Sequence, T.Sequence
+    T.Sequence,
+    T.Sequence,
+    T.Sequence,
 ]:
     r"""Constraint data from dark matter caused human deaths.
 
@@ -164,7 +163,8 @@ def load_humandeath_constraints() -> T.Tuple[
 
     """
     data = Table.read(
-        _data_dir.joinpath("humandeath_constraints.ecsv"), format="ascii.ecsv"
+        _data_dir.joinpath("humandeath_constraints.ecsv"),
+        format="ascii.ecsv",
     )
 
     return data["mass"], data["cross-section"], data["upper-lim"]
@@ -207,7 +207,8 @@ def load_dfn_constraints() -> T.Tuple[T.Sequence, T.Sequence, T.Sequence]:
 
     """
     data = Table.read(
-        _data_dir.joinpath("dfn_constraints.ecsv"), format="ascii.ecsv"
+        _data_dir.joinpath("dfn_constraints.ecsv"),
+        format="ascii.ecsv",
     )
 
     return data["mass"], data["cross-section"], data["upper-lim"]
@@ -219,7 +220,9 @@ def load_dfn_constraints() -> T.Tuple[T.Sequence, T.Sequence, T.Sequence]:
 
 
 def load_dfn_future_constraints() -> T.Tuple[
-    T.Sequence, T.Sequence, T.Sequence
+    T.Sequence,
+    T.Sequence,
+    T.Sequence,
 ]:
     r"""Constraint data from Desert Fireball Network (DFN).
 
@@ -248,7 +251,8 @@ def load_dfn_future_constraints() -> T.Tuple[
 
     """
     data = Table.read(
-        _data_dir.joinpath("dfn_future_constraints.ecsv"), format="ascii.ecsv"
+        _data_dir.joinpath("dfn_future_constraints.ecsv"),
+        format="ascii.ecsv",
     )
 
     return data["mass"], data["cross-section"], data["upper-lim"]

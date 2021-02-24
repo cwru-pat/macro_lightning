@@ -36,18 +36,18 @@ __all__ = [
 ##############################################################################
 # IMPORTS
 
-# keep this content at the top. (sets the __version__)
-from ._astropy_init import *  # noqa
-from ._astropy_init import __version__  # noqa
+# ---------------------------------------------------------
 
+# keep this content at the top. (sets the __version__)
+from ._astropy_init import *  # noqa: F401, F403  # isort:skip
+from ._astropy_init import __version__  # noqa: F401  # isort:skip
+
+# ---------------------------------------------------------
 
 # PROJECT-SPECIFIC
-
-from . import data, utils, parameters, physics, plot
-
+from . import data, parameters, physics, plot, utils
 from .parameters import solar_system_vesc_params
 from .plot import constraints_plot
-
 
 ##############################################################################
 # END

@@ -17,12 +17,9 @@ __all__ = [
 # IMPORTS
 
 # THIRD PARTY
-
-from astropy.units import Quantity
-
 import numpy as np
+from astropy.units import Quantity
 from numpy.linalg import norm
-
 
 ##############################################################################
 # CODE
@@ -128,7 +125,9 @@ def qarange(start, stop, step, unit=None):
         unit = step.unit
 
     arng = np.arange(
-        start.to_value(unit), stop.to_value(unit), step.to_value(unit)
+        start.to_value(unit),
+        stop.to_value(unit),
+        step.to_value(unit),
     )
 
     return arng * unit
