@@ -7,13 +7,14 @@ include tox.ini
 include *.yml
 include *.yaml
 include *.txt
+include .gitmodules
 
 recursive-include macro_lightning *.pyx *.c *.pxd *.png
 recursive-include docs *
 recursive-include licenses *
 recursive-include scripts *
 
-exclude discO/version.py
+exclude macro_lightning/version.py
 exclude requirements.txt
 
 prune references
