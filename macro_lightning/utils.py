@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Utilities."""
+"""Astropy Quantity-Numpy Compatibility Utilities."""
 
 __author__ = "Nathaniel Starkman"
 
