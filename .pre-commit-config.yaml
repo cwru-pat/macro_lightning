@@ -42,11 +42,6 @@ repos:
     - id: script-must-not-have-extension
     - id: shfmt
 
--   repo: https://github.com/mgedmin/check-manifest
-    rev: "0.46"
-    hooks:
-    - id: check-manifest
-
 -   repo: https://github.com/pre-commit/mirrors-autopep8
     rev: v1.5.4
     hooks:
